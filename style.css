@@ -283,3 +283,6 @@ img[data-full]{cursor:zoom-in}
 .lb .nx{right:14px;top:50%;transform:translateY(-50%)}
 .lb .lbc{position:absolute;bottom:14px;left:0;right:0;text-align:center;color:#e8e8e2;font-size:15px;padding:0 16px}
 @media (max-width:700px){.lb .pv,.lb .nx{top:auto;bottom:44px;transform:none}.lb img{max-height:78vh}}
+.track.gal{align-items:center}
+.track.gal img{height:auto;max-height:clamp(260px,34vw,420px);max-width:min(100%,calc(100vw - 40px));object-fit:contain}
+.ofp img[data-full]{height:auto;min-height:0;align-self:start;object-fit:contain}
