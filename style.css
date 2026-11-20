@@ -269,3 +269,17 @@ p{margin:0 0 1em}
   .cytat{min-height:620px}
   .cytat img{object-position:24% 40%}
 }
+/* zdjecia 20.11: caly kadr + lightbox */
+.stick img.nat{aspect-ratio:auto;height:auto}
+img[data-full]{cursor:zoom-in}
+.track.gal img[data-full]{cursor:zoom-in}
+.lb{position:fixed;inset:0;z-index:200;background:rgba(18,20,16,.94);display:none;align-items:center;justify-content:center;touch-action:pan-y}
+.lb.on{display:flex}
+.lb img{max-width:min(94vw,1600px);max-height:86vh;width:auto;height:auto;border-radius:6px;box-shadow:0 10px 40px rgba(0,0,0,.4)}
+.lb button{position:absolute;background:rgba(255,255,255,.12);color:#fff;border:0;width:48px;height:48px;border-radius:50%;font-size:26px;line-height:1;cursor:pointer;display:flex;align-items:center;justify-content:center}
+.lb button:hover{background:rgba(255,255,255,.24)}
+.lb .x{top:14px;right:14px}
+.lb .pv{left:14px;top:50%;transform:translateY(-50%)}
+.lb .nx{right:14px;top:50%;transform:translateY(-50%)}
+.lb .lbc{position:absolute;bottom:14px;left:0;right:0;text-align:center;color:#e8e8e2;font-size:15px;padding:0 16px}
+@media (max-width:700px){.lb .pv,.lb .nx{top:auto;bottom:44px;transform:none}.lb img{max-height:78vh}}
