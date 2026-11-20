@@ -4,6 +4,8 @@
   var b=d.querySelector('.burger');
   if(b){b.addEventListener('click',function(){var o=d.body.classList.toggle('menu-open');b.setAttribute('aria-expanded',o?'true':'false');});
     d.querySelectorAll('.nav a').forEach(function(a){a.addEventListener('click',function(){d.body.classList.remove('menu-open');b.setAttribute('aria-expanded','false');});});}
+  // podmenu oferty (telefon: rozwijanie strzalka)
+  d.querySelectorAll('.sub-t').forEach(function(t){t.addEventListener('click',function(){var p=t.parentNode,o=p.classList.toggle('otw');t.setAttribute('aria-expanded',o?'true':'false');});});
   // karuzele: palec (natywnie), mysz (przeciaganie), strzalki
   d.querySelectorAll('[data-track]').forEach(function(box){
     var t=box.querySelector('.track'); if(!t) return;
@@ -18,7 +20,7 @@
   });
   // lightbox: caly kadr, strzalki, gest, Esc
   var groups=[];
-  d.querySelectorAll('.track.gal, .stick, .track:not(.gal), .ofl').forEach(function(g){var im=[].slice.call(g.querySelectorAll('img[data-full]'));if(im.length)groups.push(im);});
+  d.querySelectorAll('.track.gal, .stick, .track:not(.gal), .ofl, .gal-siatka, .dyp-siatka, .usl-s').forEach(function(g){var im=[].slice.call(g.querySelectorAll('img[data-full]'));if(im.length)groups.push(im);});
   if(groups.length){
     var lb=d.createElement('div');lb.className='lb';lb.setAttribute('role','dialog');lb.setAttribute('aria-modal','true');lb.setAttribute('aria-label','Powiększone zdjęcie');
     lb.innerHTML='<img alt=""><button class="x" aria-label="Zamknij">&times;</button><button class="pv" aria-label="Poprzednie">&#8249;</button><button class="nx" aria-label="Następne">&#8250;</button><div class="lbc"></div>';
