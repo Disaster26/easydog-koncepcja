@@ -452,3 +452,6 @@ img[data-full]{cursor:zoom-in}
 .cytat.cy2 .cy-f img{position:static;inset:auto;width:auto;height:auto;max-width:100%;max-height:min(84vh,860px);object-fit:contain;border-radius:var(--r);margin:0 auto;box-shadow:0 18px 50px rgba(29,29,27,.12)}
 @media (max-width:860px){.cytat.cy2 .wrap{grid-template-columns:1fr}.cytat.cy2 .cy-f img{max-height:none}}
 .wroc{margin:clamp(28px,3vw,44px) 0 0}
+
+/* 20.11 19:50: bez podpisu w powiekszeniu */
+.lb .lbc{display:none}
