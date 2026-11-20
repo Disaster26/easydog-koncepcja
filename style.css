@@ -432,3 +432,23 @@ img[data-full]{cursor:zoom-in}
 @media (max-width:860px){.hero picture img{height:min(68svh,540px);object-position:50% 90%}}
 .dyp-siatka .dyp{margin:0;width:auto}.kw-m img{aspect-ratio:3/4;object-fit:contain}
 @media (max-width:600px){.gal-siatka{columns:2;column-gap:10px}.gal-siatka figure{margin-bottom:10px}.gal-siatka img{border-radius:8px}}
+
+/* uwagi 20.11 wieczor */
+/* hero: zdjecie zawsze w calosci (iPad, telefon, komputer) */
+.hero{height:auto;min-height:0;max-height:none;overflow:visible;display:block;padding:clamp(32px,4vw,72px) 0;background:linear-gradient(90deg,#fff 0,#fff 46%,#f2f4f1 100%)}
+.hero::before{display:none}
+.hero .wrap.hero-g{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(28px,4vw,72px);align-items:center;padding-top:0;padding-bottom:0}
+.hero .hero-f{position:static;width:auto;height:auto;margin:0}
+.hero .hero-f img{position:static;width:100%;height:auto;aspect-ratio:4/3;object-fit:contain;border-radius:var(--r);box-shadow:0 18px 50px rgba(29,29,27,.12)}
+@media (max-width:860px){
+ .hero{padding:0 0 30px;background:#fff}
+ .hero .wrap.hero-g{grid-template-columns:1fr;gap:24px;padding-top:24px}
+ .hero .hero-f img{box-shadow:none}
+}
+/* cytat ze zdjeciem w calosci */
+.cytat.cy2{min-height:0;display:block;background:var(--soft);padding:clamp(48px,6vw,96px) 0}
+.cytat.cy2::before{display:none}
+.cytat.cy2 .wrap{padding-bottom:0;display:grid;grid-template-columns:minmax(0,1.25fr) minmax(0,1fr);gap:clamp(32px,5vw,88px);align-items:center}
+.cytat.cy2 .cy-f img{position:static;inset:auto;width:auto;height:auto;max-width:100%;max-height:min(84vh,860px);object-fit:contain;border-radius:var(--r);margin:0 auto;box-shadow:0 18px 50px rgba(29,29,27,.12)}
+@media (max-width:860px){.cytat.cy2 .wrap{grid-template-columns:1fr}.cytat.cy2 .cy-f img{max-height:none}}
+.wroc{margin:clamp(28px,3vw,44px) 0 0}
