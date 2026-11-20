@@ -2,7 +2,7 @@
   --ink:#1D1D1B; --ink2:#3d3f3b; --muted:#5d625c;
   --bg:#ffffff; --soft:#f2f4f1; --line:#e2e5e0;
   --amber:#D9822B; --amber-d:#A85A12; --amber-l:#fbefe2;
-  --r:14px; --max:1200px;
+  --r:14px; --max:1640px;
   --head:"Bricolage Grotesque",system-ui,sans-serif;
   --body:"Source Sans 3",system-ui,-apple-system,"Segoe UI",sans-serif;
   --hh:64px;
@@ -14,7 +14,7 @@ img{max-width:100%;height:auto;display:block}
 a{color:inherit}
 h1,h2,h3{font-family:var(--head);font-weight:650;letter-spacing:-.015em;line-height:1.08;margin:0;font-variation-settings:"wdth" 88}
 p{margin:0 0 1em}
-.wrap{max-width:var(--max);margin:0 auto;padding:0 20px}
+.wrap{max-width:var(--max);margin:0 auto;padding:0 clamp(20px,4vw,64px)}
 .sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
 .uzup{background:var(--amber-l);border-bottom:1.5px dashed var(--amber);padding:0 .3em;border-radius:3px;color:var(--amber-d);font-size:.92em;white-space:normal}
 
@@ -286,3 +286,27 @@ img[data-full]{cursor:zoom-in}
 .track.gal{align-items:center}
 .track.gal img{height:auto;max-height:clamp(260px,34vw,420px);max-width:min(100%,calc(100vw - 40px));object-fit:contain}
 .ofp img[data-full]{height:auto;min-height:0;align-self:start;object-fit:contain}
+
+/* teksty 20.11 */
+.hero h1{font-size:clamp(42px,5.2vw,80px)}
+.hero-txt{max-width:640px}
+.hero p{max-width:580px}
+.tn-w{grid-template-columns:1fr 1fr;gap:clamp(18px,2vw,28px);margin-top:clamp(36px,4vw,56px)}
+.tn-w .card{padding:clamp(24px,2.4vw,36px)}
+.tn-w .card li{padding:12px 0 12px 22px;font-size:17px;color:var(--ink2)}
+.tn-w .card li b{color:var(--ink);font-weight:700}
+.tn-w .card li::before{top:23px}
+.nazwa{align-items:center}
+.ofz{font-size:16.5px;color:var(--ink2);margin:0 0 16px}
+.lst{list-style:none;padding:0;margin:0 0 1em}
+.lst li{position:relative;padding:10px 0 10px 24px;border-top:1px solid var(--line);font-size:18px}
+.lst li:first-child{border-top:0}
+.lst li::before{content:"";position:absolute;left:2px;top:22px;width:10px;height:2px;background:var(--amber);border-radius:2px}
+.lst.nie li::before{background:#9aa09a}
+.ofp .in p{font-size:17.5px;color:var(--ink2)}
+.ofp h3{font-size:22px;margin:1.2em 0 .5em}
+.ofp .in{padding:clamp(24px,2.6vw,40px)}
+@media (min-width:861px){.ofp{grid-template-columns:minmax(300px,30%) 1fr}}
+@media (min-width:1700px){.etapy{gap:28px}.of{width:min(380px,82vw)}}
+@media (max-width:860px){.tn-w{grid-template-columns:1fr}}
+.nazwa{align-items:end}.nazwa-p p{font-size:clamp(17px,1.25vw,19px)}
