@@ -20,7 +20,7 @@
   });
   // lightbox: caly kadr, strzalki, gest, Esc
   var groups=[];
-  d.querySelectorAll('.track.gal, .stick, .track:not(.gal), .ofl, .gal-siatka, .dyp-siatka, .usl-s').forEach(function(g){var im=[].slice.call(g.querySelectorAll('img[data-full]'));if(im.length)groups.push(im);});
+  d.querySelectorAll('.track.gal, .stick, .track:not(.gal), .ofl, .gal-siatka, .dyp-siatka, .dyp-lata, .usl-s').forEach(function(g){var im=[].slice.call(g.querySelectorAll('img[data-full]'));if(im.length)groups.push(im);});
   if(groups.length){
     var lb=d.createElement('div');lb.className='lb';lb.setAttribute('role','dialog');lb.setAttribute('aria-modal','true');lb.setAttribute('aria-label','Powiększone zdjęcie');
     lb.innerHTML='<img alt=""><button class="x" aria-label="Zamknij">&times;</button><button class="pv" aria-label="Poprzednie">&#8249;</button><button class="nx" aria-label="Następne">&#8250;</button><div class="lbc"></div>';
